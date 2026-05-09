@@ -1,0 +1,19 @@
+{
+  "name": "heliorank-chat",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker proxy vers Anthropic API pour le chatbot HELIORANK.",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "tail": "wrangler tail"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

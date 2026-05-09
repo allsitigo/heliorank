@@ -1,0 +1,23 @@
+name = "heliorank-chat"
+main = "src/worker.js"
+compatibility_date = "2026-05-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV pour rate-limit IP
+[[kv_namespaces]]
+binding = "CHAT_KV"
+id = "ae44a4d98810438bb0fe901007c285a7"
+
+# Variables (non-secret)
+[vars]
+MAX_MESSAGES_PER_HOUR = "10"
+MAX_MESSAGE_LENGTH = "2000"
+MAX_HISTORY_MESSAGES = "10"
+ALLOWED_ORIGIN = "https://heliorank.lu"
+
+# Observabilité
+[observability]
+enabled = true
+
+# Note : le secret ANTHROPIC_API_KEY est ajouté via :
+#   wrangler secret put ANTHROPIC_API_KEY
